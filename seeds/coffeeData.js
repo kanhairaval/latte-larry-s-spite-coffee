@@ -3,11 +3,13 @@ const { coffee } = require('../models');
 const coffeeData = [
     {
         coffeeName: "Brewed Coffee",
-        description: "Lightly roasted coffee that's soft, mellow and flavourful"
+        description: "Lightly roasted coffee that's soft, mellow and flavourful",
+        fileName: "11-brewed-coffee",
     },
     {
-        coffeeName: "Americano",
-        description: "Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance."
+        coffeeName: "Cafe Americano",
+        description: "Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance.",
+        fileName: "12-americano",
     },
 ];
 

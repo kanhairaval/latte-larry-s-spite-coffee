@@ -19,6 +19,10 @@ bakery.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        fileName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     },
     {
         sequelize,

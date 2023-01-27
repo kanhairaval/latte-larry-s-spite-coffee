@@ -5,20 +5,24 @@ class coffee extends Model{}
 
 coffee.init(
     {
-        id: {
+      id: {
           type: DataTypes.INTEGER,
           allowNull: false,
         //   primaryKey: true,
-          autoIncrement: true,
-        },
-        coffeeName: {
+         autoIncrement: true,
+      },
+      coffeeName: {
           type: DataTypes.STRING,
           allowNull: false,
-        },
-        description: {
+      },
+      description: {
           type: DataTypes.STRING,
           allowNull: false,
-        },
+      },
+      fileName: {
+          type: DataTypes.STRING,
+          allowNull: false,
+      },
       },
       {
         sequelize,
