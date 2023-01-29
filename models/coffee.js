@@ -1,27 +1,31 @@
+// import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
+// import our database connection from config.js
 const sequelize = require('../config/connection');
 
-class Coffee extends Model{}
+// Initialize coffee model (table) by extending off Sequelize's Model class
+class coffee extends Model{}
 
-Coffee.init(
+// set up fields and rules for coffee model
+coffee.init(
     {
       id: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          primaryKey: true,
-         autoIncrement: true,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
       },
       coffeeName: {
-          type: DataTypes.STRING,
-          allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       description: {
-          type: DataTypes.STRING,
-          allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       fileName: {
-          type: DataTypes.STRING,
-          allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       },
       {
@@ -32,4 +36,4 @@ Coffee.init(
       }
 );
 
-module.exports = Coffee;
+module.exports = coffee;

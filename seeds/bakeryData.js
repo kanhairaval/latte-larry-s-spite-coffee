@@ -1,4 +1,4 @@
-const { Bakery } = require('../models');
+const { bakery } = require('../models');
 
 const bakeryData = [
     {
@@ -13,6 +13,6 @@ const bakeryData = [
     },
 ];
 
-const seedBakery = () => Bakery.bulkCreate(bakeryData);
+const seedBakery = () => bakery.bulkCreate(bakeryData);
 
 module.exports = seedBakery;

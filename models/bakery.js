@@ -1,9 +1,13 @@
+// import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+// import our database connection from config.js
+const sequelize  = require('../config/connection');
 
-class Bakery extends Model {}
+// Initialize bakery model (table) by extending off Sequelize's Model class
+class bakery extends Model {}
 
-Bakery.init(
+// set up fields and rules for bakery model
+bakery.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -32,4 +36,4 @@ Bakery.init(
     }
 );
 
-module.exports = Bakery;
+module.exports = bakery;

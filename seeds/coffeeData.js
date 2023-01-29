@@ -1,4 +1,4 @@
-const { Coffee } = require('../models/');
+const { coffee } = require('../models/');
 
 const coffeeData = [
     {
@@ -13,6 +13,6 @@ const coffeeData = [
     },
 ];
 
-const seedCoffee = () => Coffee.bulkCreate(coffeeData);
+const seedCoffee = () => coffee.bulkCreate(coffeeData);
 
 module.exports = seedCoffee;
