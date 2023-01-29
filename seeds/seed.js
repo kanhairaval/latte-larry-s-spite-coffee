@@ -1,9 +1,14 @@
+// import sequelize and models
 const sequelize = require('../config/connection');
+const { client, inquiry } = require('../models');
+
+// import data
 const seedCoffee = require('./coffeeData');
 const seedBakery = require('./bakeryData');
 const seedClient = require('./clientData');
 const seedInquiry = require('./inquiryData');
 
+// seedall
 const seedAll = async () => {
     await sequelize.sync({ force: true });
 
@@ -11,9 +16,17 @@ const seedAll = async () => {
 
     await seedBakery();
 
-    await seedClient();
+    const Clients = await client.bulkCreate(seedClient, {
+        individualHooks: true,
+        returning: true,    
+    });
 
-    await seedInquiry();
+    for (const Inquiry of seedInquiry){
+        await inquiry.create({
+            ...Inquiry,
+            client_id: Clients[Math.floor(Math.random()*Clients.length)].id,
+        });
+    };
 
     process.exit(0);
 };

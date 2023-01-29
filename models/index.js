@@ -6,12 +6,12 @@ const inquiry = require('./inquiry');
 
 // one clients have many inquiries
 client.hasMany(inquiry,{
-    foreignKey: 'clientEmail',
+    foreignKey: 'client_id',
 });
 
 // inquiry belongs to client
 inquiry.belongsTo(client, {
-    foreignKey: 'clientEmail',
+    foreignKey: 'client_id',
 });
 
 module.exports = {client, inquiry, coffee, bakery};

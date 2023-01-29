@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { client } = require('../../models');
 
 // create new client
-router.post('/login', async(req, res) => {
+router.post('/', async(req, res) => {
     try {
         const dbClientData = await client.create({
             username: req.body.username,
@@ -11,6 +11,7 @@ router.post('/login', async(req, res) => {
         });
 
         req.session.save(()=>{
+            req.session.client_id = dbClientData.id;
             req.session.loggedIn = true;
 
             res.status(200).json(dbClientData);
@@ -43,6 +44,7 @@ router.post('/login', async (req, res) => {
         }
 
         req.session.save(()=>{
+            req.session.client_id = dbClientData.id;
             req.session.loggedIn = true;
 
             res.status(200).json({ client: dbClientData, message: 'You are logged in!'})

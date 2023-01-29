@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 });
 
 // get one bakery by its id value
-router.get('/bakery/:id', async (req, res) =>{
+router.get('/:id', async (req, res) =>{
     try {
         const bakeryData = await bakery.findByPk(req.params.id, {
             attributes: ["id", "bakeryName", "bakeryNote", "fileName"],
@@ -36,7 +36,7 @@ router.get('/bakery/:id', async (req, res) =>{
 });
 
 // create a new bakery
-router.post('/bakery', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
       const bakeryData = await bakery.create(req.body);
       res.status(200).json(bakeryData);
@@ -47,7 +47,7 @@ router.post('/bakery', async (req, res) => {
 });
 
 // update a bakery information by its id
-router.put('/bakery/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try{
       const bakeryData = await bakery.update(req.body, {
         where: {
@@ -69,7 +69,7 @@ router.put('/bakery/:id', async (req, res) => {
 });
 
 // delete a bakery by its id value
-router.delete('/bakery/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try{
       const bakeryData = await bakery.destroy({
         where: {
