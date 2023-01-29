@@ -1,14 +1,14 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class coffee extends Model{}
+class Coffee extends Model{}
 
-coffee.init(
+Coffee.init(
     {
       id: {
           type: DataTypes.INTEGER,
           allowNull: false,
-        //   primaryKey: true,
+          primaryKey: true,
          autoIncrement: true,
       },
       coffeeName: {
@@ -32,4 +32,4 @@ coffee.init(
       }
 );
 
-module.exports = coffee;
+module.exports = Coffee;
