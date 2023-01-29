@@ -3,7 +3,7 @@ const { bakery } = require('../models');
 const bakeryData = [
     {
         bakeryName: "Bagel",
-        bakeryNote: "New York-style bagel topped with garlic, salt, poppy and sesame seeds.",
+        bakeryNote: "New York-style bagel topped with onion, garlic, salt, poppy and sesame seeds.",
         fileName: "01-bagel"
     },
     {
