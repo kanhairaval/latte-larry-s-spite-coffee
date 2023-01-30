@@ -15,17 +15,17 @@ inquiry.init(
             autoIncrement: true,
             primaryKey: true
         },
-        clientEmail: {
-            type: DataTypes.STRING,
-            references: {
-                model: 'client',
-                key: 'email',
-            },
-        },
         message: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        client_id: {
+            type: DataTypes.INTEGER,
+            references:{
+                model: 'client',
+                key: 'id',
+            },
+        },
     },
     {
         sequelize,

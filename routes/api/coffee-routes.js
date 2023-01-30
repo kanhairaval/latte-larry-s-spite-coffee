@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { coffee } = require('../../models');
 
 // get all coffee data
-router.get('/coffee', async (req, res) => {
+router.get('/', async (req, res) => {
     try{
         const coffeeData  = await coffee.findAll({
             attributes: ["id", "coffeeName", "description", "fileName"],
@@ -16,7 +16,7 @@ router.get('/coffee', async (req, res) => {
 });
 
 // get one coffee by its id
-router.get('/coffee/:id', async (req, res) =>{
+router.get('/:id', async (req, res) =>{
     try {
         const coffeeData = await coffee.findByPk(req.params.id, {
             attributes: ["id", "coffeeName", "description", "fileName"],
@@ -36,7 +36,7 @@ router.get('/coffee/:id', async (req, res) =>{
 });
 
 // create a new coffee
-router.post('/coffee', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
       const coffeeData = await coffee.create(req.body);
       res.status(200).json(coffeeData);
@@ -47,7 +47,7 @@ router.post('/coffee', async (req, res) => {
 });
 
 // update a coffee information by its id
-router.put('/coffee/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try{
       const coffeeData = await coffee.update(req.body, {
         where: {
@@ -69,7 +69,7 @@ router.put('/coffee/:id', async (req, res) => {
 });
 
 // delete a coffee by its id value
-router.delete('/coffee/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try{
       const coffeeData = await coffee.destroy({
         where: {

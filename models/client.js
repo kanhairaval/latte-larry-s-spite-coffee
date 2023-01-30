@@ -28,7 +28,6 @@ client.init(
     },
     email: {
       type: DataTypes.STRING,
-      primaryKey: true,
       allowNull: false,
       unique: true,
       validate: {
