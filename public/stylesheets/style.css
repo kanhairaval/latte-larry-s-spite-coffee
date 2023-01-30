@@ -345,6 +345,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
   padding: 30px;
   background-color: lightyellow;
   border-radius: 10px;
+  margin-top: 2.5%;
 }
 
 .inquiry-form h3 {
@@ -373,7 +374,48 @@ textarea {
   border-radius: 5px;
 }
 
-.its-all-about-larry {
-  display: inline-block;
-  vertical-align: top;
+.about-sec {
+  display: flex;
+  flex-direction: row;
+  margin-left: 25px;
+}
+
+.larry-shop {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  height: 350px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.larry-shop:hover {
+  transform: scale(1.1);
+}
+
+.about-sec p {
+  padding: 2.5%;
+  font-size: 20px;
+  width: 50%;
+  text-align: justify;
+  margin-right: 20px;
+  margin-left: 40px;
+  margin-top: 0%;
+  border-style: solid;
+  border-width: 5px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+
+.about-us-h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5%;
+  font-size: x-large;
+  font-weight: bolder;
 }
