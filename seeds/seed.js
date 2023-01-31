@@ -5,8 +5,8 @@ const { client, inquiry } = require('../models');
 // import data
 const seedCoffee = require('./coffeeData');
 const seedBakery = require('./bakeryData');
-const seedClient = require('./clientData');
-const seedInquiry = require('./inquiryData');
+const clientData = require('./clientData');
+const inquiryData = require('./inquiryData');
 
 // seedall
 const seedAll = async () => {
@@ -16,12 +16,12 @@ const seedAll = async () => {
 
     await seedBakery();
 
-    const Clients = await client.bulkCreate(seedClient, {
+    const Clients = await client.bulkCreate(clientData, {
         individualHooks: true,
         returning: true,    
     });
 
-    for (const Inquiry of seedInquiry){
+    for (const Inquiry of inquiryData){
         await inquiry.create({
             ...Inquiry,
             client_id: Clients[Math.floor(Math.random()*Clients.length)].id,
