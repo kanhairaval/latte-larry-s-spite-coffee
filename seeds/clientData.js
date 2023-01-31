@@ -1,5 +1,3 @@
-// import client module
-const { client } = require('../models');
 // import faker.js to create random database later
 const { faker } = require('@faker-js/faker');
 
@@ -36,6 +34,4 @@ const clientData = [
     },
 ]
 
-const seedClient = () => client.bulkCreate(clientData);
-
-module.exports = seedClient;
+module.exports = clientData;
