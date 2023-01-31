@@ -1,6 +1,3 @@
-// import client module
-const { inquiry } = require('../models');
-
 const inquiryData = [
     {
         message: "Could you please provide sandwitch options, so I can grab my lunch here?",
@@ -16,6 +13,4 @@ const inquiryData = [
     },
 ]
 
-const seedInquiry = () => inquiry.bulkCreate(inquiryData);
-
-module.exports = seedInquiry;
+module.exports = inquiryData;
