@@ -2,16 +2,16 @@
 const coffee = require('./coffee');
 const bakery = require('./bakery');
 const client = require('./client');
-const inquiry = require('./inquiry');
+const Inquiry = require('./Inquiry');
 
 // one clients have many inquiries
-client.hasMany(inquiry,{
+client.hasMany(Inquiry,{
     foreignKey: 'client_id',
 });
 
 // inquiry belongs to client
-inquiry.belongsTo(client, {
+Inquiry.belongsTo(client, {
     foreignKey: 'client_id',
 });
 
-module.exports = {client, inquiry, coffee, bakery};
+module.exports = {client, Inquiry, coffee, bakery};
