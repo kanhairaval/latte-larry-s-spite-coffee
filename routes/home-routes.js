@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {res.render('homepage')});
 
-router.get('/profile', async (req, res) => {res.render('profile')});
+// router.get('/profile', async (req, res) => {res.render('profile')});
 
 // get all the coffee
 router.get('/coffee', async (req, res) => {
@@ -43,7 +43,7 @@ router.get('/bakery', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/inquiry', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const clientData = await client.findByPk(req.session.client_id, {
@@ -53,7 +53,7 @@ router.get('/inquiry', withAuth, async (req, res) => {
 
     const clients = clientData.get({ plain: true });
 
-    res.render('inquiry', {
+    res.render('profile', {
       ...clients,
       // logged_in: true,
     });
@@ -66,7 +66,7 @@ router.get('/login', (req, res) => {
   console.log(req.session);
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/inquiry');
+    res.redirect('/profile');
     return;
   }
 
