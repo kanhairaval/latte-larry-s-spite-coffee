@@ -486,20 +486,25 @@ button[type="submit"] {
   vertical-align: top;
 }
 
-.card img {
-  padding: 1%;
+#coffee {
+  padding: 5%;
+  width: 350px;
 }
 
-h3 {
-  border: 1px solid black;
+/* .card img {
   padding: 1%;
-  width: 300px;
+} */
+
+h3 {
+  border: 1px solid darkgrey;
+  padding: 1%;
+  width: 90%;
   height: 110px;
   display: inline-block;
 }
 
 section img {
-  width: 300px;
+  width: 90%;
   height: 300px;
   object-fit: cover;
 }
@@ -508,8 +513,4 @@ section header {
   padding: 5%;
   font-size: x-large;
   font-weight: bolder;
-}
-
-section div {
-  padding-left: 5%;
 }
