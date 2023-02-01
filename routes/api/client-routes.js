@@ -1,8 +1,22 @@
 const router = require('express').Router();
 const { client } = require('../../models');
 
+// get all client data
+router.get('/', async (req, res) => {
+    try{
+        const ClientData  = await client.findAll({
+            attributes: ["id", "username", "email", "password"],
+        });
+
+        res.status(200).json(ClientData);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 // create new client
-router.post('/', async(req, res) => {
+router.post('/', async (req, res) => {
     try {
         const dbClientData = await client.create({
             username: req.body.username,
