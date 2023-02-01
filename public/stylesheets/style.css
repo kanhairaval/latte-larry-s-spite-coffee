@@ -486,14 +486,10 @@ button[type="submit"] {
   vertical-align: top;
 }
 
-#coffee {
+#coffee_bakery {
   padding: 5%;
   width: 350px;
 }
-
-/* .card img {
-  padding: 1%;
-} */
 
 h3 {
   border: 1px solid darkgrey;

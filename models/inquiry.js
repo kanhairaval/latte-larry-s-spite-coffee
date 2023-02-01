@@ -4,10 +4,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // Initialize inquiry model (table) by extending off Sequelize's Model class
-class inquiry extends Model {}
+class Inquiry extends Model {}
 
 // set up fields and rules for inquiry model
-inquiry.init(
+Inquiry.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -32,8 +32,8 @@ inquiry.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'inquiry', 
+        modelName: 'Inquiry', 
     }
 )
 
-module.exports = inquiry; 
+module.exports = Inquiry; 

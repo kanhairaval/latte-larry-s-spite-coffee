@@ -1,6 +1,6 @@
 // import sequelize and models
 const sequelize = require('../config/connection');
-const { client, inquiry } = require('../models');
+const { client, Inquiry } = require('../models');
 
 // import data
 const seedCoffee = require('./coffeeData');
@@ -21,9 +21,9 @@ const seedAll = async () => {
         returning: true,    
     });
 
-    for (const Inquiry of inquiryData){
-        await inquiry.create({
-            ...Inquiry,
+    for (const inquiry of inquiryData){
+        await Inquiry.create({
+            ...inquiry,
             client_id: Clients[Math.floor(Math.random()*Clients.length)].id,
         });
     };

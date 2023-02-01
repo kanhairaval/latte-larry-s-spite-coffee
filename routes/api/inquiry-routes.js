@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { inquiry, client } = require('../../models');
+const { Inquiry, client } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
 // get all inquiries including its associated client data
 router.get('/', async (req, res) => {
     try{
-        const inquiryData = await inquiry.findAll({
+        const inquiryData = await Inquiry.findAll({
           attributes: ["id", "message", "client_id"],
           include: [{
             model: client,
@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
 // get one inquiry by its id value including its associated client data
 router.get('/:id', async (req, res) => {
     try {
-        const inquiryData = await inquiry.findByPk(req.params.id, {
+        const inquiryData = await Inquiry.findByPk(req.params.id, {
           attributes: ["id", "message", "client_id"],
           include: [{
             model: client,
@@ -44,8 +44,9 @@ router.get('/:id', async (req, res) => {
 // create a new inquiry
 // before that, logged in is checked. If client did not login, it will go to the login page
 router.post('/', withAuth, async (req, res) => {
+  console.log(req.body);
   try{
-    const newInquiry = await inquiry.create({
+    const newInquiry = await Inquiry.create({
       ...req.body,
       client_id: req.session.client_id,
     });
@@ -61,7 +62,7 @@ router.post('/', withAuth, async (req, res) => {
 // delete the inquiry by its id value
 router.delete('/:id', withAuth, async (req, res) => {
     try{
-        const inquiryData = await inquiry.destroy({
+        const inquiryData = await Inquiry.destroy({
           where: {
             id: req.params.id,
             client_id: req.session.client_id,
