@@ -4,6 +4,8 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {res.render('homepage')});
 
+router.get('/profile', async (req, res) => {res.render('profile')});
+
 // get all the coffee
 router.get('/coffee', async (req, res) => {
   try {

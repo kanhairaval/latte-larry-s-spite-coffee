@@ -41,11 +41,11 @@ router.post('/login', async (req, res) => {
     try{
         const dbClientData = await client.findOne({
             where: {
-                email: req.body.email,
-            },
+                username: req.body.username
+            }
         });
 
-        if(!dClientData) {
+        if(!dbClientData) {
             res.status(400).json({ message: 'Incorrect email or password, please try again!'});
             return;
         }
