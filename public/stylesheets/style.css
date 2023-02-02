@@ -481,6 +481,16 @@ button[type="submit"] {
   cursor: pointer;
 }
 
+#submit_message {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .card{
   display: inline-block;
   vertical-align: top;
@@ -509,4 +519,10 @@ section header {
   padding: 5%;
   font-size: x-large;
   font-weight: bolder;
+}
+
+.inquiryTitle {
+  font-weight: bolder;
+  font-size: x-large;
+  margin-bottom: 3%;
 }

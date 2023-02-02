@@ -2,7 +2,9 @@ const router = require('express').Router();
 const { coffee, bakery, client, Inquiry } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {res.render('homepage')});
+router.get('/', async (req, res) => {res.render('homepage', { 
+  logged_in: req.session.logged_in 
+  })});
 
 // router.get('/profile', async (req, res) => {res.render('profile')});
 
@@ -17,6 +19,7 @@ router.get('/coffee', async (req, res) => {
 
     res.render('coffee', {
       coffees,
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     console.log(err);
@@ -35,6 +38,7 @@ router.get('/bakery', async (req, res) => {
 
     res.render('food', {
       bakeries,
+      logged_in: req.session.logged_in 
     });
   } catch (err) {
     console.log(err);
@@ -55,7 +59,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...clients,
-      // logged_in: true,
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
