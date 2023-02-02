@@ -14,7 +14,7 @@
   - [Demo](Demo)
 
   ## Description
-  It's a website for a local coffee shop, where users can look at all the coffee products offered and place an order through the inquiry tab to get coffee grounds delivered at home.
+  It's a website for a local coffee shop, where users can look at all the coffee products offered and place an order through the inquiry tab to get coffee grounds delivered at home. This site is built on Vanilla JS, tailwind components, Node, Expess, MySQL & HTML-CSS.
 
   ## Installation
   Just paste the deployed URL link in your web browser.
