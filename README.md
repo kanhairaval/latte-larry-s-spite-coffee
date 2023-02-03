@@ -70,3 +70,5 @@ https://github.com/PennyLIU2022
 pennyliu806@gmail.com
   
 ## Screenshots
+
+![Screen Shot 2023-02-02 at 10 27 47 PM](https://user-images.githubusercontent.com/114125334/216505709-6710ee80-c21c-4ac2-97d7-d792eccebdfd.png)
