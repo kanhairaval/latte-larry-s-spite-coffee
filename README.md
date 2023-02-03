@@ -36,34 +36,37 @@
     npm start
     ```
 
-  ## Usage
-  Browse the site to look at best sellers or naviagte over to the coffee section and place an order through inquiry for whatever blend you are interested in.
-
-  ## How-to-contribute
-  Just navigate over to the questions section and contact us to contribute.
-
-  ## Testing
-  N/A
-
-  ## License
-  MIT
-  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-  https://opensource.org/licenses/MIT
-
-  This project is licensed under MIT.
-
-  ## Questions
-  https://github.com/kanhairaval
-
-  kanhairaval@gmail.com
+## Deployed App in Heroku
+[View deployed HEROKU app here!](https://larry-coffee.herokuapp.com/)
   
-  https://github.com/MarioT573
-  
-  mariotrig573@gmail.com
-  
-  https://github.com/PennyLIU2022
+## Usage
+Browse the site to look at best sellers or naviagte over to the coffee section and place an order through inquiry for whatever blend you are interested in.
 
-  pennyliu806@gmail.com
+## How-to-contribute
+Just navigate over to the questions section and contact us to contribute.
+
+## Testing
+N/A
+
+## License
+MIT
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+https://opensource.org/licenses/MIT
+
+This project is licensed under MIT.
+
+## Questions
+https://github.com/kanhairaval
+
+kanhairaval@gmail.com
   
-  ## Demo
+https://github.com/MarioT573
+  
+mariotrig573@gmail.com
+  
+https://github.com/PennyLIU2022
+
+pennyliu806@gmail.com
+  
+## Screenshots
