@@ -17,7 +17,24 @@
   It's a website for a local coffee shop, where users can look at all the coffee products offered and place an order through the inquiry tab to get coffee grounds delivered at home. This site is built on Vanilla JS, tailwind components, Node, Expess, MySQL & HTML-CSS.
 
   ## Installation
-  Just paste the deployed URL link in your web browser.
+- This application need a node.js, the installation details can be found at [offical website](https://nodejs.org/en/download/).
+- This application also need to install mysql, please refer to [mysql website](https://www.mysql.com/downloads/) for details.
+- Install required node pacakges by running:
+    ```bash
+    npm i
+    ```
+- Create schema of database tables by running all the sql queries in ```db``` folder.
+    ```
+    source db/schema.sql
+    ```
+- Start the application by running
+    ```
+    node seeds/seed.js
+    ```
+    and then
+    ```
+    npm start
+    ```
 
   ## Usage
   Browse the site to look at best sellers or naviagte over to the coffee section and place an order through inquiry for whatever blend you are interested in.
