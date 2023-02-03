@@ -2,7 +2,7 @@
 const coffee = require('./coffee');
 const bakery = require('./bakery');
 const client = require('./client');
-const Inquiry = require('./Inquiry');
+const Inquiry = require('./inquiry');
 
 // one clients have many inquiries
 client.hasMany(Inquiry,{
